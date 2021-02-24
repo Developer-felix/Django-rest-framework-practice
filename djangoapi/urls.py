@@ -19,5 +19,6 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     #RESTFRAMEWORK URLS
+    path('',include('quickstart.urls')),
     path('api/blog/',include('blogapp.api.urls'))
 ]

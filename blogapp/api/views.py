@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from rest_framework import serializers
+from rest_framework import viewsets
 # Create your views here.
 from rest_framework import status
 from rest_framework.response import Response
@@ -33,5 +34,9 @@ def api_detail_blog_view(request, slug):
             data("sucess") == "Updated successfully"
             return Response(data=data)
         return Response(serializer.data)
+
+class BlogPostViewSet(viewsets.ModelViewSet):
+    queryset = BlogPost.objects.all()
+    serializer_class = BlogPostSerializer
 
     

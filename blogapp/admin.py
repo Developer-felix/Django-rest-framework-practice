@@ -10,5 +10,5 @@ admin.site.register(BlogPost,BlogPostAdmin)
 
 
 #admin customisation
-admin.site.site_header = "DRF practice for blogpost"
+admin.site.site_header = "DRF Admin Panel"
 admin.site.site_title = "Blog post Admin For DRF"
